@@ -103,7 +103,8 @@ public class OrchestrationApp {
 	
 	private static void runSparkPartitioningJob() throws Exception {
 //		String jarPath = "jars/data-partitioning-job-1.0.0.jar";
-		String jarPath = "C:\\Code_Base_P\\data-partitioning-job\\target\\data-partitioning-job-1.0.0.jar";
+		String jarPath = "C:\\Code_Base_P\\BDPETE\\data-partitioning-job\\target\\data-partitioning-job-1.0.0.jar";
+//		String jarPath = "C:\\Code_Base_P\\data-partitioning-job\\target\\data-partitioning-job-1.0.0.jar";
 		// Build command to run Spark job JAR
 //		String sparkJar = "../data-partitioning-job/target/data-partitioning-job-1.0.0.jar";
 //		String[] command = { "java", "-cp", sparkJar, "com.ecommerce.partitioning.SparkPartitioningJob" };
@@ -115,7 +116,7 @@ public class OrchestrationApp {
 //				"com.ecommerce.partitioning.SparkPartitioningJob", "--master", "local[*]",
 //				"../data-partitioning-job/target/data-partitioning-job-1.0.0.jar").inheritIO().start();
 
-		Process process = new ProcessBuilder("spark-submit.md", "--class",
+		Process process = new ProcessBuilder("spark-submit.cmd", "--class",
 				"com.ecommerce.partitioning.SparkPartitioningJob", "--master", "local[*]",
 //				"--driver-memory", "384m",
 //				"--executor-memory", "384m",
